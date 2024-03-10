@@ -1,3 +1,5 @@
+import secrets
+
 board = [' ' for x in range(10)]
 
 def insertLetter(letter,pos):
@@ -88,9 +90,8 @@ def computerMove():
         return move
 
 def selectRandom(li):
-    import random
     ln = len(li)
-    r = random.randrange(0,ln)
+    r = secrets.SystemRandom().randrange(0,ln)
     return li[r]
 
 def main():
